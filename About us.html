@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content="DiscoverTshiawelo Primary School in Vuwani, Limpopo. Learn about our school, education values, vision, mission and commitment to quality education. ">
+    <meta name = "keywords" content=" Tshiawelo Primary School, about our school, school history, school vision, school mission, core values.">
+    <meta name = "author" content="Mufamadi Fulufhelo">
+<title>About Us | Tshiawelo Primary School</title>
+<link rel="stylesheet" href="CSS/style.css">
+<script src="JavaScript/script.js" defer></script>
+</head>
+<body>
+    <header>
+<img src = "Images/school logo.jpg" class="logo" alt="Tshiawelo Primary School logo">
+<nav class="navbar">
+<a href = "Home.html">Home</a>
+<a href = "About us.html">About Us</a>
+<a href = "Academics.html">Academics</a>
+<a href = "Gallery.html">Gallery</a>
+<a href = "Enquiry.html">Enquiry</a>
+<a href = "Contact Us.html">Contact Us</a>
+</nav>
+</Header>
+<main>
+<h1><u><i>About Tshiawelo Primary School</i></u></h1>
+<h2>Providing Quality Education for Every Child</h2>
+<div class = "about-hero">
+    <img src = "Images/Picture 2.jpeg" 
+    class = "about-hero-image"
+    alt = "Tshiawelo Primary School">
+
+    <div class = "about-intro">
+        <h2>Welcome to Tshiawelo Primary School</h2>
+
+        <p>
+            Tshiawelo Primary School is a public primary school located in Tshitungulwane Village, Vuwani, Limpopo. The school is committed to providing quality education in a safe, caring, and supportive environment where every learner is encouraged to reach their full potential.
+        </p>
+
+        <p>
+            Our dedicated teachers work closely with parents and the community to promote academic excellence, discipline, respect, and teamwork. We believe that every child deserves an opportunity to succeed through education and positive values.
+        </p>
+    </div>
+    
+</div>
+    
+<section class="accordion-section">
+    <h2>Discover More About Our School</h2>
+
+    <!-- Our Vision -->
+    <div class="accordion">
+        <button class="accordion-button" type="button">
+            Our Vision
+            <span>+</span>
+        </button>
+
+        <div class="accordion-content">
+            <p>
+                Tshiawelo Primary School fosters an environment that nurtures learners
+                academically, socially, physically and emotionally so that they are equipped to
+                tackle the challenges and become productive members of society globally.
+            </p>
+        </div>
+    </div>
+
+    <!-- Our Mission -->
+    <div class="accordion">
+        <button class="accordion-button" type="button">
+            Our Mission
+            <span>+</span>
+        </button>
+
+        <div class="accordion-content">
+            <p>
+                To educate all learners to the highest levels of academic achievement, to
+                enable them to reach and expand their potential, and to prepare them to
+                become productive, responsible, ethical, creative and compassionate.
+            </p>
+        </div>
+    </div>
+
+    <!-- Our Core Values -->
+    <div class="accordion">
+        <button class="accordion-button" type="button">
+            Our Core Values
+            <span>+</span>
+        </button>
+
+        <div class="accordion-content">
+            <p>
+                Academic Excellence<br>
+                Discipline<br>
+                Respect<br>
+                Teamwork<br>
+                Integrity<br>
+                Lifelong Learning
+            </p>
+        </div>
+    </div>
+
+</section>
+</main>
+<footer> 
+    <p>&copy; 2026 Tshiawelo Primary School. All Rights Reserved.</p>
+    <p>Empowering Learners for a Brighter Future!!</p>
+    <p id="date-time"></p>
+</footer>
+<script>
+    //data and time update on the footer
+    function updateDateTime() {
+        const now = new Date();
+        const option ={
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        document.getElementById('date-time').textContent = now.toLocaleString('en-US', option);
+    }
+    //update date time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>

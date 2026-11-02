@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "keywords" content=" Welcome to Tshiawelo Primary School. Discover our school, academic programmes, activities and commimentto quality education.">
+    <meta name = "keywords" content=" Tshiawelo Primary School, primary education, school in Tshitungulwane Village, Vuwani, Limpopo, quality education, academic excellence.">
+    <meta name = "author" content="Mufamadi Fulufhelo">
+
+<title>Tshiawelo Primary School | Home</title>
+<link rel="stylesheet" href="CSS/style.css">
+<script src="JavaScript/script.js" defer></script>
+</head>
+
+<body>
+<header>
+<img src = "Images/school logo.jpg" class="logo" alt="Tshiawelo Primary School logo">
+<nav class = "navbar">
+<a href = "Home.html">Home</a>
+<a href = "About us.html">About Us</a>
+<a href = "Academics.html">Academics</a>
+<a href = "Gallery.html">Gallery</a>
+<a href = "Enquiry.html">Enquiry</a>
+<a href = "Contact Us.html">Contact Us</a>
+</nav>
+</Header>
+
+<main class ="home-main">
+<!--Welcome Section -->
+<section class="home-hero">
+
+    <div class="hero-text">
+        <p class="welcome-label">WELCOME TO OUR SCHOOL</p>
+
+            <h1>Tshiawelo Primary School</h1>
+                <h2>Empowering Learners for a Brighter Future</h2>
+
+                <p>
+                    Tshiawelo Primary School is a public primary school
+                    located in Tshitungulwane Village, Vuwani, Limpopo.
+                    We serve learners from Grade R to Grade 7 in a
+                    supportive and respectful learning environment.
+                </p>
+
+                <p>
+                    Our goal is to help every learner develop the
+                    knowledge, skills and values needed for a successful
+                    future.
+                </p>
+
+                <a href="About us.html" class="home-button">
+                    Discover Our School
+                </a>
+    </div>
+
+    <div class="hero-image">
+        <img src="Images/Picture 3.jpeg" alt="Learners participating in school activitiesat Tshiawelo Primary School">
+    </div>
+
+</section>
+
+<!--School Motto-->
+<section class="home-motto">
+    <h2>Learning Today, Leading Tomorrow</h2>
+    <p>
+        Empowering learners to achieve excellence through
+        quality education, discipline and respect!
+    </p>
+</section>
+
+<!--School Video-->
+<section class="home-video-section">
+    <h2>Experience Tshiawelo Primary School</h2>
+    <p>
+        Discover some of the activities and memorable moments
+        at our school.
+    </p>
+
+    <video class="home-video" controls>
+        <source src="Images/school video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+</section>
+
+<!--School Information Cards-->
+<section class="home-features">
+    <h2>Discover Our School</h2>
+    <div class="feature-container">
+        <div class="feature-card">
+            <h3>Our School</h3>
+            <p>
+                Learn about our school's background
+                vision, mission and core values.
+            </p>
+            <a href="About us.html">Learn More</a>
+        </div>
+
+        <div class="feature-card">
+            <h3>Academics</h3>
+            <p>
+                Explore our educational programmes
+                from Grade R to Grade 7.
+            </p>
+            <a href="Academics.html">Explore Academics</a>
+        </div>
+
+        <div class="feature-card">
+            <h3>School Gallery</h3>
+            <p>
+                Explore photographs capturing
+                special moments at our school.
+            </p>
+            <a href="Gallery.html">View Gallery</a>
+        </div>
+    </div>
+
+</section>
+
+</main>
+<footer>
+   <p>&copy; 2026 Tshiawelo Primary School. All Rights Reserved.</p>
+    <p>Empowering Learners for a Brighter Future!!</p>
+    <p id="date-time"></p>
+</footer>
+<script>
+    //data and time update on the footer
+    function updateDateTime() {
+        const now = new Date();
+        const option ={
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        document.getElementById('date-time').textContent = now.toLocaleString('en-US', option);
+    }
+    //update date time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>

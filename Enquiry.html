@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "keywords" content="Contact Tshiawelo Primary School for enquiries regarding admissions, registration, academics, volunteering and sponsorship.">
+    <meta name = "keywords" content="Tshiawelo Primary School, school enquries, volunteering, sponsorship, school services. ">
+    <meta name = "author" content="Mufamadi Fulufhelo">
+<title>Enquiry | Tshiawelo Primary School</title>
+<link rel="stylesheet" href="CSS/style.css">
+<script src="JavaScript/script.js" defer></script>
+</head>
+<body>
+<header>
+<img src = "Images/school logo.jpg" class="logo" alt="Tshiawelo Primary School logo">
+<nav class = "navbar">
+<a href = "Home.html">Home</a>
+<a href = "About us.html">About us</a>
+<a href = "Academics.html">Academics</a>
+<a href = "Gallery.html">Gallery</a>
+<a href= "Enquiry.html">Enquiry</a>
+<a href = "Contact Us.html">Contact us</a>
+</nav>
+</Header>
+<main>
+<h1>Enquiry</h1>
+<p>
+    If you have any questions about TSHIAWELO PRIMARY SCHOOL,
+    please complete the enquiry form below. We will be happy
+    to assist you.
+</p>
+<div class="enquiry-layout">
+
+    <div class="enquiry-intro">
+        <h2>How Can We Help You?</h2>
+
+        <p>
+            Thank you for your interest in Tshiawelo Primary School.
+            We are happy to assist with admissions, registration,
+            academics, volunteering and sponsorship enquiries.
+        </p>
+
+        <p>
+            Please complete the form and provide all the required
+            information so that we will be able to assist you.
+        </p>
+    </div>
+
+    <div class="enquiry-form-section">
+        <h2>Send an Enquiry</h2>
+
+        <p class required-note>
+            Fields marked with <span class="required">*</span> are required.
+        </p>
+
+        <form id="enquiry-form">
+
+            <label for="name">
+                Full Name: <span class="required">*</span>
+            </label> 
+            <input type="text" id="name" name="name"
+                placdeholder="Enter your full name" required>
+
+            <label for="email">
+                Email Address: <span class="required">*</span>
+            </label>
+            <input type="email" id="email" name="email"
+                placeholder="Enter your email address" required>
+
+            <label for="phone">
+                Phone Number: <span class="required">*</span>
+            </label>
+            <input type="tel" id="phone" name="phone"
+                placeholder="Enter your phone number" required>
+
+            <label for="enquiry">
+                Enquiry Type: <span class="required">*</span>
+            </label>
+            <select id="enquiry" name="enquiry" required>
+                <option value="">Select an enquiry type</option>
+                <option value="admission">Admission</option>
+                <option value="registration">Registration</option>
+                <option value="academics">Academics</option>
+                <option value="general">General</option>
+                <option value="volunteering">Volunteering</option>
+                <option value="sponsorship">Sponsorship</option>
+            </select>
+
+<label for message="message">
+                Your Message: <span class="required">*</span>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </label>
+
+     
+            <input type="submit" value="Submit Enquiry">
+
+        </form>
+
+        <p id="enquiry-response"></p>
+    </div>
+
+</div>
+
+</main>
+<footer>
+    <p>&copy; 2026 Tshiawelo Primary School. All Rights Reserved.</p>
+    <p>Empowering Learners for a Brighter Future!!</p>
+    <p id="date-time"></p>
+</footer>
+<script>
+    //data and time update on the footer
+    function updateDateTime() {
+        const now = new Date();
+        const option ={
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        document.getElementById('date-time').textContent = now.toLocaleString('en-US', option);
+    }
+    //update date time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>

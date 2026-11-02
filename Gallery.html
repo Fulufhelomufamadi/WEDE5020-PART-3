@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "keywords" content="Explore photos of Tshiawelo Primary School, showcasing school events, learners achivements, activities and memorablemoments.">
+    <meta name = "keywords" content="Tshiawelo Primary School gallery, school photos, school events,learner achievements, school activities. ">
+    <meta name = "author" content="Mufamadi Fulufhelo">
+<title>Gallery | Tshiawelo Primary School</title>
+<link rel="stylesheet" href="CSS/style.css">
+<script src="JavaScript/script.js" defer></script>
+</head>
+<body>
+<header>
+<img src = "Images/school logo.jpg" class="logo" alt="Tshiawelo Primary School logo">
+<nav class = "navbar">
+<a href = "Home.html">Home</a>
+<a href = "About us.html">About Us</a>
+<a href = "Academics.html">Academics</a>
+<a href = "Gallery.html">Gallery</a>
+<a href = "Enquiry.html">Enquiry</a>
+<a href = "Contact Us.html">Contact Us</a>
+</nav>
+</Header>
+<main>
+<h1>Gallery</h1>
+<h2>Some of Our Captured Memories</h2>
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="Images/Picture 5.jpeg" alt="Learners receiving awards at Tshiawelo Primary School prize giving ceremony">
+        <p><b>Prize Giving Ceremony</b></p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="Images/Picture 4.jpeg" alt="Tshiawelo Primary School learners participating in an educational Trip">
+        <p><b>Educational Trip</b></p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="Images/Picture 3.jpeg" alt="Learners attending a school assembly at Tshiawelo Primary School">
+        <p><b>School Assembly</b></p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="Images/Picture 1.jpeg" alt="Top Achiever Award receiving recognition at Tshiawelo Primary School">
+        <p><b>Top Achiever Award</b></p>
+    </div>
+
+    <div class="gallery-item">
+        <img src ="Images/Picture 2.jpeg" alt="Tshiawelo Primary School staff and learners at a school event">
+        <p><b>School Team</b></p>  
+    </div>
+
+</div>
+
+<div id="lightbox" class="lightbox" aria-hidden="true" inert>
+
+    <button id="close-lightbox" type="button" aria-label="Close lightbox">
+        &times;
+    </button>
+
+    <button id="prev-image" type="button" aria-label="Previous item">
+        &#10094;
+    </button>
+
+    <img id="lightbox-image" src="" alt="">
+
+    <button id="next-image" type="button" aria-label="Next item">
+        &#10095;
+    </button>
+
+</div>
+
+</main>
+<footer> 
+    <p>&copy; 2026 Tshiawelo Primary School. All Rights Reserved.</p>
+    <p>Empowering Learners for a Brighter Future!!</p>
+    <p id="date-time"></p>
+</footer>
+<script>
+    //data and time update on the footer
+    function updateDateTime() {
+        const now = new Date();
+        const option ={
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        document.getElementById('date-time').textContent = now.toLocaleString('en-US', option);
+    }
+    //update date time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>
